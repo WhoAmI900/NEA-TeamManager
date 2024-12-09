@@ -3,57 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Manager</title>
+    <title>TeamHub - Manage Your Team</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <header>
-        <h1>Team Manager</h1>
-        <button class="login-btn" onclick="openLoginModal()">Login</button>
-    </header>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Team<span>Hub</span></h1>
+            </div>
+            <nav class="header-nav">
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#team">Our Team</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="header-btn" onclick="toggleLogin()">Login</button>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#teams">Teams</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section class="intro">
-            <h2>Welcome to the Team Manager</h2>
-            <p>Manage your teams and projects efficiently. Track progress, assign tasks, and collaborate seamlessly.</p>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Empower Your Team</h2>
+                <p>Streamline collaboration, track progress, and achieve goals with ease using TeamHub.</p>
+                <button class="cta-btn">Get Started</button>
+            </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Team Manager. All rights reserved.</p>
-    </footer>
+        <main>
+            <section class="features-grid">
+                <div class="feature-card">
+                    <h3>Task Management</h3>
+                    <p>Assign tasks, set deadlines, and track progress in one place.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Team Collaboration</h3>
+                    <p>Facilitate smooth communication and efficient teamwork.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Project Tracking</h3>
+                    <p>Monitor project status and milestones with ease.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Analytics</h3>
+                    <p>Gain insights into team performance with detailed reports.</p>
+                </div>
+            </section>
+        </main>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <form>
+        <footer>
+            <p>&copy; 2024 TeamHub. All rights reserved.</p>
+        </footer>
+
+        <!-- Login Popup -->
+        <div id="loginPopup" class="login-popup">
+            <div class="login-form">
                 <h2>Login</h2>
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                <button type="submit">Login</button>
-                <button type="button" class="cancelbtn" onclick="closeLoginModal()">Cancel</button>
-            </form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button>Login</button>
+                <button class="close-btn" onclick="toggleLogin()">Close</button>
+            </div>
         </div>
     </div>
 
     <script>
-        function openLoginModal() {
-            document.getElementById('loginModal').style.display = 'block';
-        }
-
-        function closeLoginModal() {
-            document.getElementById('loginModal').style.display = 'none';
+        function toggleLogin() {
+            const loginPopup = document.getElementById('loginPopup');
+            loginPopup.style.display = loginPopup.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>
