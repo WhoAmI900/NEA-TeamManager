@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Manager</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <h1>Team Manager</h1>
+        <button class="login-btn" onclick="openLoginModal()">Login</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#teams">Teams</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to the Team Manager</h2>
+            <p>Manage your teams and projects efficiently. Track progress, assign tasks, and collaborate seamlessly.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Team Manager. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <form>
+                <h2>Login</h2>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+                <button type="button" class="cancelbtn" onclick="closeLoginModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openLoginModal() {
+            document.getElementById('loginModal').style.display = 'block';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
