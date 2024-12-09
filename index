@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunicSpryness Hub</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to RunicSpryness</h1>
+        <p>Your personal hub for all things important!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" id="link1">Link 1</a></li>
+            <li><a href="#" id="link2">Link 2</a></li>
+            <li><a href="#" id="link3">Link 3</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="daily-tasks">
+            <h2>Daily Essentials</h2>
+            <ul>
+                <li><a href="#" id="task1">Task 1</a></li>
+                <li><a href="#" id="task2">Task 2</a></li>
+                <li><a href="#" id="task3">Task 3</a></li>
+            </ul>
+        </section>
+
+        <section id="notes">
+            <h2>Quick Notes</h2>
+            <textarea placeholder="Write your notes here..." rows="5"></textarea>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 RunicSpryness. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
